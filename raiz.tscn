@@ -1,0 +1,663 @@
+[gd_scene load_steps=65 format=3 uid="uid://cc13j6ibq6bq3"]
+
+[ext_resource type="PackedScene" uid="uid://iy2lfasbl78g" path="res://modelos/mapaBonito/field.glb" id="1_f7j11"]
+[ext_resource type="PackedScene" uid="uid://c1cinx2xnvutu" path="res://modelos/mapaBonito/pink_tree.glb" id="2_1uk4a"]
+[ext_resource type="PackedScene" uid="uid://5k28nx5c8hdj" path="res://modelos/mapaBonito/mossy_stone_wall.glb" id="2_g8ty2"]
+[ext_resource type="PackedScene" uid="uid://c77q1at26k24q" path="res://jugador.tscn" id="3_apd2t"]
+[ext_resource type="PackedScene" uid="uid://b8gkcjnswytxl" path="res://modelos/mapaBonito/cherry_blossom_trees.glb" id="3_g8ty2"]
+[ext_resource type="Script" uid="uid://sa1ot4cvqjec" path="res://tp.gd" id="4_apd2t"]
+[ext_resource type="PackedScene" uid="uid://eidqpvc3r8w2" path="res://modelos/mapaBonito/animated_butterfly.glb" id="4_sukfs"]
+[ext_resource type="Script" uid="uid://dnl883vpqjek3" path="res://modelos/mapaBonito/animated_butterfly.gd" id="5_8sen6"]
+[ext_resource type="PackedScene" uid="uid://b62s5sjioww5q" path="res://modelos/mapaBonito/flower.glb" id="6_ghi5u"]
+[ext_resource type="PackedScene" uid="uid://dodxoky5573i5" path="res://modelos/mapaBonito/garden_flower_-_vegetation.glb" id="7_tdr6c"]
+[ext_resource type="PackedScene" uid="uid://cdls1xwlhiee7" path="res://modelos/mapaBonito/free_quick_terrain_test.glb" id="8_bu4yn"]
+[ext_resource type="PackedScene" uid="uid://d223pifrf5u8n" path="res://modelos/mapaBonito/sunday_garden_fun.glb" id="9_x0vmf"]
+[ext_resource type="PackedScene" uid="uid://b3j2gfvayorw2" path="res://modelos/mapaBonito/japanese_garden_bench.glb" id="10_e1587"]
+[ext_resource type="PackedScene" uid="uid://rjpbstdg2u57" path="res://modelos/mapaBonito/enchanted_garden_fairy.glb" id="11_7ubua"]
+[ext_resource type="PackedScene" uid="uid://d1epbqw5qlite" path="res://modelos/mapaBonito/red_hedge.glb" id="12_6lm65"]
+[ext_resource type="PackedScene" uid="uid://b0js3jomf4byh" path="res://modelos/mapaFeo/transmutation_platform.glb" id="14_587ag"]
+[ext_resource type="PackedScene" uid="uid://ds5epwtjkxboc" path="res://movPlataforma.tscn" id="15_o4mqx"]
+[ext_resource type="Script" uid="uid://bi5xmr0llfykh" path="res://mov_plataforma_hor_2.gd" id="16_pne22"]
+[ext_resource type="Script" uid="uid://dtwh2cgem5lyc" path="res://mov_plataforma_vert1.gd" id="17_l2rp5"]
+[ext_resource type="Script" uid="uid://d4hsu1fahno0p" path="res://mov_plataforma_vert2.gd" id="18_utkmq"]
+[ext_resource type="Texture2D" uid="uid://bsvjtqa0w4heb" path="res://texturas/lava/Lava001_1K-JPG_Color.jpg" id="19_h78lc"]
+[ext_resource type="Texture2D" uid="uid://q5rkn5sd3n52" path="res://texturas/lava/Lava001_1K-JPG_Emission.jpg" id="20_b12k0"]
+[ext_resource type="Texture2D" uid="uid://csjlq8d3kk1of" path="res://texturas/lava/Lava001_1K-JPG_Displacement.jpg" id="21_5fea5"]
+[ext_resource type="Texture2D" uid="uid://crhwxiaw28ch5" path="res://texturas/lava/Lava001_1K-PNG_Roughness.png" id="22_dnamb"]
+[ext_resource type="PackedScene" uid="uid://cy0m117a1t2c3" path="res://modelos/mapaFeo/hell_arena.glb" id="23_w2poa"]
+[ext_resource type="PackedScene" uid="uid://dlceigjvvgwol" path="res://modelos/mapaFeo/iisa_-_hell_breed.glb" id="24_tuq4e"]
+[ext_resource type="Script" uid="uid://dywv8qinp1507" path="res://modelos/mapaFeo/demonio_vuela.gd" id="25_sidl8"]
+[ext_resource type="PackedScene" uid="uid://cohq67fvgt6k8" path="res://modelos/mapaFeo/insect_girl.glb" id="26_7pmto"]
+[ext_resource type="Script" uid="uid://bl5skyv4vy1ss" path="res://modelos/mapaFeo/insecta_movimiento.gd" id="27_x12ur"]
+[ext_resource type="PackedScene" uid="uid://c07qtef5pagai" path="res://enemigo.tscn" id="28_j4cnq"]
+[ext_resource type="Script" uid="uid://cjymc4o4cjavm" path="res://cuchilloARecoger.gd" id="29_ploti"]
+[ext_resource type="PackedScene" uid="uid://bdeld05nxxfxx" path="res://modelos/mapaFeo/a_bloody_kitchen_knife.glb" id="30_4puve"]
+[ext_resource type="PackedScene" uid="uid://ce8d555h8xl0n" path="res://pastillas.tscn" id="31_86a5l"]
+[ext_resource type="Script" uid="uid://dihv55e7e0ybl" path="res://pastillas.gd" id="32_jfuod"]
+[ext_resource type="Script" uid="uid://c8hcux3y7khf" path="res://tp_pastis.gd" id="33_30dch"]
+[ext_resource type="Script" uid="uid://ccvhsinyiy27y" path="res://menu.gd" id="36_1uk4a"]
+[ext_resource type="PackedScene" uid="uid://xe8ykqtn5tld" path="res://suelo_lava.tscn" id="36_sukfs"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tl684"]
+
+[sub_resource type="Sky" id="Sky_apd2t"]
+sky_material = SubResource("ProceduralSkyMaterial_tl684")
+
+[sub_resource type="Environment" id="Environment_rq8n4"]
+background_mode = 2
+sky = SubResource("Sky_apd2t")
+ambient_light_color = Color(0.52837044, 0.65960747, 0.98485845, 1)
+ssr_enabled = true
+ssao_enabled = true
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v8cdw"]
+size = Vector3(1, 0.56140137, 3.0985107)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tl684"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_apd2t"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_apd2t"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rq8n4"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rq8n4"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tl684"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4dbu4"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6ukj5"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_57be3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nsx2i"]
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("19_h78lc")
+metallic_specular = 0.0
+roughness_texture = ExtResource("22_dnamb")
+emission_enabled = true
+emission_texture = ExtResource("20_b12k0")
+normal_enabled = true
+normal_scale = 16.0
+normal_texture = ExtResource("22_dnamb")
+heightmap_enabled = true
+heightmap_scale = 16.0
+heightmap_deep_parallax = true
+heightmap_min_layers = 27
+heightmap_max_layers = 44
+heightmap_texture = ExtResource("21_5fea5")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7btbj"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_oiall"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_oiall"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7btbj"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bq263"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7btbj"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jykb5"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_tl684"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_apd2t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tl684"]
+emission_enabled = true
+emission = Color(1, 1, 0.4509804, 1)
+emission_energy_multiplier = 16.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_apd2t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tl684"]
+size = Vector3(3.496643, 0.27264404, 4.1148376)
+
+[sub_resource type="Theme" id="Theme_1uk4a"]
+
+[node name="raiz" type="Node3D"]
+
+[node name="Sol" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5600174, 0.8284808, 0, -0.8284808, 0.5600174, 4.0824776, 73.3707, 81.57149)
+shadow_enabled = true
+
+[node name="Cielo" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rq8n4")
+
+[node name="Jugador" parent="." instance=ExtResource("3_apd2t")]
+
+[node name="Mapa_Bonito" type="Node3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="pared" parent="Mapa_Bonito" instance=ExtResource("2_g8ty2")]
+transform = Transform3D(-0.020026444, 0, 0.00021881278, 0, 0.02002764, 0, -0.00021881278, 0, -0.020026444, 3.512012, -0.9267234, 1.7186427)
+
+[node name="prado" parent="Mapa_Bonito" instance=ExtResource("1_f7j11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9977093, -16.32699, -148.33626)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mapa_Bonito/prado"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Bonito/prado/StaticBody3D"]
+transform = Transform3D(17.889898, 0, 0, 0, 10, 0, 0, 0, 10, -6.5767584, 13.041395, 138.26671)
+shape = SubResource("BoxShape3D_v8cdw")
+
+[node name="montana" type="Node3D" parent="Mapa_Bonito"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.403793, 10.854031, -177.5587)
+
+[node name="montana" parent="Mapa_Bonito/montana" instance=ExtResource("8_bu4yn")]
+transform = Transform3D(-0.03826641, 0, -0.38824746, 0, 0.3901287, 0, 0.38824746, 0, -0.03826641, -200.48009, -18.664635, -76.937675)
+
+[node name="arboles_rosa" type="Node3D" parent="Mapa_Bonito"]
+
+[node name="arbol1" parent="Mapa_Bonito/arboles_rosa" instance=ExtResource("2_1uk4a")]
+transform = Transform3D(0.527411, 0, 0, 0, 0.527411, 0, 0, 0, 0.527411, -3.4760501, -0.75538963, -2.4987915)
+
+[node name="arbol2" parent="Mapa_Bonito/arboles_rosa" instance=ExtResource("2_1uk4a")]
+transform = Transform3D(0.54637146, 0, 0.3579306, 0, 0.65317386, 0, -0.3579306, 0, 0.54637146, 3.614315, -0.80385447, -3.3503335)
+
+[node name="arbol3" parent="Mapa_Bonito/arboles_rosa" instance=ExtResource("2_1uk4a")]
+transform = Transform3D(0.5619411, 0, 0.21743244, 0, 0.60254014, 0, -0.21743244, 0, 0.5619411, -3.0646968, -0.82552373, -6.934502)
+
+[node name="arbol4" parent="Mapa_Bonito/arboles_rosa" instance=ExtResource("2_1uk4a")]
+transform = Transform3D(0.75074494, 0, 0, 0, 0.75074494, 0, 0, 0, 0.75074494, 3.9682503, -0.95833135, -8.027552)
+
+[node name="arboles_cerezo" type="Node3D" parent="Mapa_Bonito"]
+
+[node name="cerezo2" parent="Mapa_Bonito/arboles_cerezo" instance=ExtResource("3_g8ty2")]
+transform = Transform3D(-0.00088721374, 0, -0.05512942, 0, 0.055136558, 0, 0.05512942, 0, -0.00088721374, 6.4718604, -0.87952083, -5.8317695)
+
+[node name="cerezo1" parent="Mapa_Bonito/arboles_cerezo" instance=ExtResource("3_g8ty2")]
+transform = Transform3D(0.0035367012, 0, 0.055625536, 0, 0.05573785, 0, -0.055625536, 0, 0.0035367012, -5.3026896, -0.81845903, -4.6151185)
+
+[node name="mariposas" type="Node3D" parent="Mapa_Bonito"]
+
+[node name="Mariposa1" parent="Mapa_Bonito/mariposas" instance=ExtResource("4_sukfs")]
+transform = Transform3D(0.04551415, 0.18569851, -0.20308572, -0.04061009, 0.2081234, 0.18120363, 0.2721738, 0, 0.060997684, 3.8432891, 0, -4.5102167)
+script = ExtResource("5_8sen6")
+
+[node name="Mariposa2" parent="Mapa_Bonito/mariposas" instance=ExtResource("4_sukfs")]
+transform = Transform3D(0.040637694, -0.16926628, 0.14619787, 0.045331225, 0.15174067, 0.16308327, -0.21902047, 0, 0.060879737, -2.0885007, -0.020193607, -3.1553211)
+script = ExtResource("5_8sen6")
+
+[node name="Mariposa3" parent="Mapa_Bonito/mariposas" instance=ExtResource("4_sukfs")]
+transform = Transform3D(0.18782175, 0.095448315, -0.12665665, 0.052005555, 0.14839736, 0.1889522, 0.14982553, -0.17116407, 0.093190424, -1.6653776, 0, -8.024267)
+script = ExtResource("5_8sen6")
+
+[node name="arbustos" type="Node3D" parent="Mapa_Bonito"]
+
+[node name="lavanda1" parent="Mapa_Bonito/arbustos" instance=ExtResource("6_ghi5u")]
+transform = Transform3D(0.7367101, 0, 0, 0, 0.7367101, 0, 0, 0, 0.7367101, 4.2845297, -0.98469794, -2.0588598)
+
+[node name="lavanda2" parent="Mapa_Bonito/arbustos" instance=ExtResource("6_ghi5u")]
+transform = Transform3D(0.7090037, 0, 0, 0, 0.7090037, 0, 0, 0, 0.7090037, 4.771864, -0.99948776, -4.7990046)
+
+[node name="lavanda3" parent="Mapa_Bonito/arbustos" instance=ExtResource("6_ghi5u")]
+transform = Transform3D(0.8595687, 0, 0, 0, 0.8595687, 0, 0, 0, 0.8595687, 4.490254, -1.1937523, -7.066746)
+
+[node name="lavanda4" parent="Mapa_Bonito/arbustos" instance=ExtResource("6_ghi5u")]
+transform = Transform3D(0.763281, 0, 0, 0, 0.763281, 0, 0, 0, 0.763281, -4.289105, -1.121967, -1.6052334)
+
+[node name="lavanda5" parent="Mapa_Bonito/arbustos" instance=ExtResource("6_ghi5u")]
+transform = Transform3D(0.8540057, 0, 0, 0, 0.8540057, 0, 0, 0, 0.8540057, -3.966289, -1.1401024, -5.4913564)
+
+[node name="lavanda6" parent="Mapa_Bonito/arbustos" instance=ExtResource("6_ghi5u")]
+transform = Transform3D(0.91067225, 0, 0, 0, 0.91067225, 0, 0, 0, 0.91067225, -3.905348, -1.201368, -7.9245987)
+
+[node name="rosa1" parent="Mapa_Bonito/arbustos" instance=ExtResource("7_tdr6c")]
+transform = Transform3D(0.20603365, 0, 0, 0, 0.20603365, 0, 0, 0, 0.20603365, -5.044362, -0.82786673, -0.5008608)
+
+[node name="rosa2" parent="Mapa_Bonito/arbustos" instance=ExtResource("7_tdr6c")]
+transform = Transform3D(0.2611507, 0, 0, 0, 0.2611507, 0, 0, 0, 0.2611507, 6.13068, -0.8989758, 0.22054219)
+
+[node name="rosa3" parent="Mapa_Bonito/arbustos" instance=ExtResource("7_tdr6c")]
+transform = Transform3D(-0.04511748, 0, 0.13418622, 0, 0.20190416, 0, -0.25928634, 0, -0.023349263, -5.1857986, -0.76822865, -3.4451592)
+
+[node name="rosa4" parent="Mapa_Bonito/arbustos" instance=ExtResource("7_tdr6c")]
+transform = Transform3D(0.2635207, 0, 0, 0, 0.2635207, 0, 0, 0, 0.2635207, -5.404947, -0.8895607, -6.5636225)
+
+[node name="rosa5" parent="Mapa_Bonito/arbustos" instance=ExtResource("7_tdr6c")]
+transform = Transform3D(0.23452659, 0, -0.03566562, 0, 0.23722301, 0, 0.03566562, 0, 0.23452659, 5.9467463, -0.89628917, -3.3518524)
+
+[node name="rosa6" parent="Mapa_Bonito/arbustos" instance=ExtResource("7_tdr6c")]
+transform = Transform3D(0.26691437, 0, 0, 0, 0.26691437, 0, 0, 0, 0.26691437, 6.1124396, -0.927588, -9.232132)
+
+[node name="jardin" parent="Mapa_Bonito" instance=ExtResource("9_x0vmf")]
+transform = Transform3D(-0.31342664, 0, 0.014172368, 0, 0.3137469, 0, -0.014172368, 0, -0.31342664, 0, -0.9032016, -15.093444)
+
+[node name="bancos" type="Node3D" parent="Mapa_Bonito"]
+
+[node name="banco1" parent="Mapa_Bonito/bancos" instance=ExtResource("10_e1587")]
+transform = Transform3D(0.2364413, 0, 0.5803369, 0, 0.62665415, 0, -0.5803369, 0, 0.2364413, -1.9528304, -0.7102762, -4.8462095)
+
+[node name="estatua" parent="Mapa_Bonito" instance=ExtResource("11_7ubua")]
+transform = Transform3D(0.49767047, 0, -0.8673662, 0, 1, 0, 0.8673662, 0, 0.49767047, 2.1424575, 0.19096106, -8.22132)
+
+[node name="vallas" type="Node3D" parent="Mapa_Bonito"]
+
+[node name="hedge1" parent="Mapa_Bonito/vallas" instance=ExtResource("12_6lm65")]
+transform = Transform3D(-1.9384158, 0.08029971, 0.031334147, 0.08219265, 1.8937725, -0.0013286297, -0.062429413, 0, -0.9746655, 8.166811, -0.845407, -24.224577)
+
+[node name="hedge2" parent="Mapa_Bonito/vallas" instance=ExtResource("12_6lm65")]
+transform = Transform3D(-1.9335389, 0.1481449, 0.03125531, 0.16012102, 1.7889212, -0.0025883275, -0.06242941, 0, -0.9746657, 3.8163128, -0.845407, -24.224577)
+
+[node name="hedge3" parent="Mapa_Bonito/vallas" instance=ExtResource("12_6lm65")]
+transform = Transform3D(-1.9391211, 0.06257407, 0.031345546, 0.06341249, 1.9134824, -0.0010250515, -0.062429417, 0, -0.9746657, -0.5492368, -0.845407, -24.224577)
+
+[node name="hedge4" parent="Mapa_Bonito/vallas" instance=ExtResource("12_6lm65")]
+transform = Transform3D(-1.9339622, 0.13910593, 0.031262152, 0.15492348, 1.7365065, -0.0025043103, -0.062429406, 0, -0.9746655, -4.8128805, -0.845407, -24.224577)
+
+[node name="hedge5" parent="Mapa_Bonito/vallas" instance=ExtResource("12_6lm65")]
+transform = Transform3D(-0.118200675, 0, -0.9733606, 0.02904754, 1.7893333, -0.0008902108, 1.9373422, -0.026828375, -0.059373114, -6.584098, -0.845407, -21.810102)
+
+[node name="hedge6" parent="Mapa_Bonito/vallas" instance=ExtResource("12_6lm65")]
+transform = Transform3D(-0.11820067, 0, -0.9733606, 0.19290902, 1.8956964, -0.0059120213, 1.9279327, -0.1896835, -0.059084747, -6.855978, -0.845407, -17.58764)
+
+[node name="hedge7" parent="Mapa_Bonito/vallas" instance=ExtResource("12_6lm65")]
+transform = Transform3D(-0.118200675, 0, -0.9733606, 0.19509608, 1.8409092, -0.005979048, 1.9277126, -0.18631108, -0.059078, -7.082468, -0.845407, -13.294796)
+
+[node name="hedge8" parent="Mapa_Bonito/vallas" instance=ExtResource("12_6lm65")]
+transform = Transform3D(-0.11820067, 0, -0.9733606, 0.19862849, 1.6921504, -0.006087304, 1.9273518, -0.17438917, -0.059066944, -7.3619475, -0.845407, -8.937752)
+
+[node name="hedge9" parent="Mapa_Bonito/vallas" instance=ExtResource("12_6lm65")]
+transform = Transform3D(-0.11859292, 0, -0.97316355, 0.040033408, 1.6919369, -0.0012225859, 1.9435774, -0.034850173, -0.05935518, -7.4874706, -0.845407, -4.8242416)
+
+[node name="hedge10" parent="Mapa_Bonito/vallas" instance=ExtResource("12_6lm65")]
+transform = Transform3D(-0.038281478, -9.378708e-11, -0.9749804, 0.13274649, 1.6087245, -0.0013153848, 1.9362395, -0.110292405, -0.019186195, -7.705531, -0.90910554, -0.40249145)
+
+[node name="hedge11" parent="Mapa_Bonito/vallas" instance=ExtResource("12_6lm65")]
+transform = Transform3D(0.14726698, -0.006106546, 0.9723538, 0.15492348, 1.7365065, -0.0025043169, -1.9293576, 0.13897188, 0.074018225, 9.382536, -0.845407, -21.472876)
+
+[node name="hedge12" parent="Mapa_Bonito/vallas" instance=ExtResource("12_6lm65")]
+transform = Transform3D(0.14726698, -0.006106546, 0.9723538, 0.15492348, 1.7365065, -0.0025043169, -1.9293576, 0.13897188, 0.074018225, 9.042892, -0.845407, -17.199783)
+
+[node name="hedge13" parent="Mapa_Bonito/vallas" instance=ExtResource("12_6lm65")]
+transform = Transform3D(0.14726698, -0.006106546, 0.9723538, 0.15492348, 1.7365065, -0.0025043169, -1.9293576, 0.13897188, 0.074018225, 8.707715, -0.845407, -12.83271)
+
+[node name="hedge14" parent="Mapa_Bonito/vallas" instance=ExtResource("12_6lm65")]
+transform = Transform3D(0.14726698, -0.006106546, 0.9723538, 0.15492348, 1.7365065, -0.0025043169, -1.9293576, 0.13897188, 0.074018225, 8.493006, -0.845407, -8.681473)
+
+[node name="hedge15" parent="Mapa_Bonito/vallas" instance=ExtResource("12_6lm65")]
+transform = Transform3D(0.14726698, -0.006106546, 0.9723538, 0.15492348, 1.7365065, -0.0025043169, -1.9293576, 0.13897188, 0.074018225, 8.481844, -0.845407, -4.422618)
+
+[node name="hedge16" parent="Mapa_Bonito/vallas" instance=ExtResource("12_6lm65")]
+transform = Transform3D(0.14726698, -0.006106546, 0.9723538, 0.15492348, 1.7365065, -0.0025043169, -1.9293576, 0.13897188, 0.074018225, 8.480837, -0.845407, -0.4860711)
+
+[node name="Barreras" type="Node3D" parent="Mapa_Bonito"]
+
+[node name="pared1" type="MeshInstance3D" parent="Mapa_Bonito/Barreras"]
+transform = Transform3D(-0.024172219, 0.99906087, -0.55151105, -0.9997076, -0.024187865, 0, -0.0008698797, 0.03595296, 15.325388, -7.0886216, 0, -10.419887)
+visible = false
+mesh = SubResource("PlaneMesh_tl684")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mapa_Bonito/Barreras/pared1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Bonito/Barreras/pared1/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_apd2t")
+
+[node name="pared2" type="MeshInstance3D" parent="Mapa_Bonito/Barreras"]
+transform = Transform3D(-0.02133248, -0.999242, -0.51428837, 0.9997722, -0.0213438, 0, -0.00069499866, -0.03255467, 15.785708, 8.437446, 0, -10.255621)
+visible = false
+mesh = SubResource("PlaneMesh_apd2t")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mapa_Bonito/Barreras/pared2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Bonito/Barreras/pared2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rq8n4")
+
+[node name="pared3" type="MeshInstance3D" parent="Mapa_Bonito/Barreras"]
+transform = Transform3D(8.929508, 0, 0, 0, -0.0038397654, -0.9999926, 0, 0.9999926, -0.0038397654, 1.0484916, 0, 1.6031728)
+visible = false
+mesh = SubResource("PlaneMesh_rq8n4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mapa_Bonito/Barreras/pared3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Bonito/Barreras/pared3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_tl684")
+
+[node name="pared4" type="MeshInstance3D" parent="Mapa_Bonito/Barreras"]
+transform = Transform3D(8.929508, 0, 0, 0, -0.0038397654, -0.9999926, 0, 0.9999926, -0.0038397654, 1.0484916, 0, -24.086376)
+visible = false
+mesh = SubResource("PlaneMesh_rq8n4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mapa_Bonito/Barreras/pared4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Bonito/Barreras/pared4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_tl684")
+
+[node name="Mapa_Feo" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 824.45953, -296.3478, 453.8044)
+
+[node name="plataformas" type="Node3D" parent="Mapa_Feo"]
+
+[node name="plataforma1" parent="Mapa_Feo/plataformas" instance=ExtResource("14_587ag")]
+transform = Transform3D(0.10070689, 0, 0, 0, 0.10070689, 0, 0, 0, 0.10070689, 0.14295149, 63.242577, 1.1523113)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Mapa_Feo/plataformas/plataforma1"]
+transform = Transform3D(14.513656, 0, 0, 0, 1, 0, 0, 0, 14.540291, 0, 1.3897095, 0)
+visible = false
+mesh = SubResource("PlaneMesh_4dbu4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mapa_Feo/plataformas/plataforma1/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Feo/plataformas/plataforma1/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6ukj5")
+
+[node name="plataforma2" parent="Mapa_Feo/plataformas" instance=ExtResource("14_587ag")]
+transform = Transform3D(0.10070689, 0, 0, 0, 0.10070689, 0, 0, 0, 0.10070689, -3.102023, 63.75927, 8.429737)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Mapa_Feo/plataformas/plataforma2"]
+transform = Transform3D(14.513656, 0, 0, 0, 1, 0, 0, 0, 14.540291, 0, 1.3897095, 0)
+visible = false
+mesh = SubResource("PlaneMesh_4dbu4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mapa_Feo/plataformas/plataforma2/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Feo/plataformas/plataforma2/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6ukj5")
+
+[node name="plataforma3" parent="Mapa_Feo/plataformas" instance=ExtResource("14_587ag")]
+transform = Transform3D(0.10070689, 0, 0, 0, 0.10070689, 0, 0, 0, 0.10070689, -12.174906, 66.379135, 18.297443)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Mapa_Feo/plataformas/plataforma3"]
+transform = Transform3D(14.513656, 0, 0, 0, 1, 0, 0, 0, 14.540291, 0, 1.3897095, 0)
+visible = false
+mesh = SubResource("PlaneMesh_4dbu4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mapa_Feo/plataformas/plataforma3/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Feo/plataformas/plataforma3/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6ukj5")
+
+[node name="plataforma4" parent="Mapa_Feo/plataformas" instance=ExtResource("14_587ag")]
+transform = Transform3D(0.10070689, 0, 0, 0, 0.10070689, 0, 0, 0, 0.10070689, 9.589758, 60.74643, 108.95913)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Mapa_Feo/plataformas/plataforma4"]
+transform = Transform3D(14.513656, 0, 0, 0, 1, 0, 0, 0, 14.540291, 0, 1.3897095, 0)
+visible = false
+mesh = SubResource("PlaneMesh_4dbu4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mapa_Feo/plataformas/plataforma4/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Feo/plataformas/plataforma4/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6ukj5")
+
+[node name="plataforma5" parent="Mapa_Feo/plataformas" instance=ExtResource("14_587ag")]
+transform = Transform3D(0.10070689, 0, 0, 0, 0.10070689, 0, 0, 0, 0.10070689, 13.627836, 63.152718, 115.61005)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Mapa_Feo/plataformas/plataforma5"]
+transform = Transform3D(14.513656, 0, 0, 0, 1, 0, 0, 0, 14.540291, 0, 1.3897095, 0)
+visible = false
+mesh = SubResource("PlaneMesh_4dbu4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mapa_Feo/plataformas/plataforma5/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Feo/plataformas/plataforma5/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6ukj5")
+
+[node name="plataforma6" parent="Mapa_Feo/plataformas" instance=ExtResource("14_587ag")]
+transform = Transform3D(0.10070689, 0, 0, 0, 0.10070689, 0, 0, 0, 0.10070689, 9.791847, 65.25592, 123.63875)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Mapa_Feo/plataformas/plataforma6"]
+transform = Transform3D(14.513656, 0, 0, 0, 1, 0, 0, 0, 14.540291, 0, 1.3897095, 0)
+visible = false
+mesh = SubResource("PlaneMesh_4dbu4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mapa_Feo/plataformas/plataforma6/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Feo/plataformas/plataforma6/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6ukj5")
+
+[node name="plataforma7" parent="Mapa_Feo/plataformas" instance=ExtResource("14_587ag")]
+transform = Transform3D(0.10070689, 0, 0, 0, 0.10070689, 0, 0, 0, 0.10070689, 1.3182526, 74.93771, 150.99057)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Mapa_Feo/plataformas/plataforma7"]
+transform = Transform3D(14.513656, 0, 0, 0, 1, 0, 0, 0, 14.540291, 0, 1.3897095, 0)
+visible = false
+mesh = SubResource("PlaneMesh_4dbu4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mapa_Feo/plataformas/plataforma7/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Feo/plataformas/plataforma7/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6ukj5")
+
+[node name="plataforma8" parent="Mapa_Feo/plataformas" instance=ExtResource("14_587ag")]
+transform = Transform3D(0.10070689, 0, 0, 0, 0.10070689, 0, 0, 0, 0.10070689, 1.3182526, 72.193634, 163.43964)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Mapa_Feo/plataformas/plataforma8"]
+transform = Transform3D(14.513656, 0, 0, 0, 1, 0, 0, 0, 14.540291, 0, 1.3897095, 0)
+visible = false
+mesh = SubResource("PlaneMesh_4dbu4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mapa_Feo/plataformas/plataforma8/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Feo/plataformas/plataforma8/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6ukj5")
+
+[node name="plataforma9" parent="Mapa_Feo/plataformas" instance=ExtResource("14_587ag")]
+transform = Transform3D(0.10070689, 0, 0, 0, 0.10070689, 0, 0, 0, 0.10070689, 1.3182526, 67.2557, 175.9989)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Mapa_Feo/plataformas/plataforma9"]
+transform = Transform3D(14.513656, 0, 0, 0, 1, 0, 0, 0, 14.540291, 0, 1.3897095, 0)
+visible = false
+mesh = SubResource("PlaneMesh_4dbu4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mapa_Feo/plataformas/plataforma9/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Feo/plataformas/plataforma9/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6ukj5")
+
+[node name="platHor1" parent="Mapa_Feo/plataformas" instance=ExtResource("15_o4mqx")]
+transform = Transform3D(0.19076173, 0, 0, 0, 0.19076173, 0, 0, 0, 0.19076173, -14.691391, 64.63257, 47.226097)
+
+[node name="platHor2" parent="Mapa_Feo/plataformas" instance=ExtResource("15_o4mqx")]
+transform = Transform3D(0.25271097, 0, 0, 0, 0.25271097, 0, 0, 0, 0.25271097, -3.308341, 61.42487, 90.94434)
+script = ExtResource("16_pne22")
+
+[node name="platVert1" parent="Mapa_Feo/plataformas" instance=ExtResource("15_o4mqx")]
+transform = Transform3D(0.14406593, 0, 0, 0, 0.14406593, 0, 0, 0, 0.14406593, 2.4892683, 72.098885, 128.80658)
+script = ExtResource("17_l2rp5")
+distancia = 10.0
+
+[node name="platVert2" parent="Mapa_Feo/plataformas" instance=ExtResource("15_o4mqx")]
+transform = Transform3D(0.14406593, 0, 0, 0, 0.14406593, 0, 0, 0, 0.14406593, 2.4892683, 72.098885, 139.42073)
+script = ExtResource("18_utkmq")
+distancia = 10.0
+
+[node name="paredes" type="Node3D" parent="Mapa_Feo"]
+
+[node name="pared1" type="MeshInstance3D" parent="Mapa_Feo/paredes"]
+transform = Transform3D(-0.0063864887, -1.4927082, -205.38321, -123.70666, 0.3452876, 7.651641e-09, 0.42744884, 99.90633, -3.068653, -17.981445, 142.14536, -17.656128)
+mesh = SubResource("PlaneMesh_57be3")
+surface_material_override/0 = SubResource("StandardMaterial3D_nsx2i")
+
+[node name="pared2" type="MeshInstance3D" parent="Mapa_Feo/paredes"]
+transform = Transform3D(-0.4274372, -99.903625, 3.4199467, -123.70666, 0.3452875, -4.895051e-09, -0.007117698, -1.6635933, -205.37764, 151.22592, 142.14536, 177.28271)
+mesh = SubResource("PlaneMesh_57be3")
+surface_material_override/0 = SubResource("StandardMaterial3D_nsx2i")
+
+[node name="pared5" type="MeshInstance3D" parent="Mapa_Feo/paredes"]
+transform = Transform3D(181.3046, -1.0017265, 0.022622285, -1.8257983, -99.46354, 3.4200354, -0.010432173, -1.6563392, -205.38742, -19.090187, 255.86572, 177.28271)
+mesh = SubResource("PlaneMesh_57be3")
+surface_material_override/0 = SubResource("StandardMaterial3D_nsx2i")
+
+[node name="pared3" type="MeshInstance3D" parent="Mapa_Feo/paredes"]
+transform = Transform3D(0.42749658, 99.91748, 0, -123.706665, 0.34528762, 0, 0, 0, 205.40614, -191.1787, 142.14536, 168.71674)
+mesh = SubResource("PlaneMesh_57be3")
+surface_material_override/0 = SubResource("StandardMaterial3D_nsx2i")
+
+[node name="pared4" type="MeshInstance3D" parent="Mapa_Feo/paredes"]
+transform = Transform3D(-0.0041035553, -0.9591184, 205.39668, -123.70668, 0.3452876, 0, -0.42747682, -99.91288, -1.9717152, -18.380905, 142.14536, 373.665)
+mesh = SubResource("PlaneMesh_57be3")
+surface_material_override/0 = SubResource("StandardMaterial3D_nsx2i")
+
+[node name="arena" type="Node3D" parent="Mapa_Feo"]
+
+[node name="arena" parent="Mapa_Feo/arena" instance=ExtResource("23_w2poa")]
+transform = Transform3D(-35.742165, 0, 2.6912355, 0, 35.843346, 0, -2.6912355, 0, -35.742165, 0, 60.462524, 244.55302)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Mapa_Feo/arena"]
+transform = Transform3D(6.356484, 0, -1.1997521, 0, 0.99999994, 0, 0.48899323, 0, 15.595726, 2.480236, 61.101685, 195.82164)
+visible = false
+mesh = SubResource("PlaneMesh_7btbj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mapa_Feo/arena/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Feo/arena/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_oiall")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Mapa_Feo/arena"]
+transform = Transform3D(26.02628, 0, 0, 0, 1, 0, 0, 0, 33.129906, 0, 60.81926, 244.92563)
+visible = false
+mesh = SubResource("PlaneMesh_oiall")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mapa_Feo/arena/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Feo/arena/MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7btbj")
+
+[node name="demonios" type="Node3D" parent="Mapa_Feo"]
+
+[node name="demonio1" parent="Mapa_Feo/demonios" instance=ExtResource("24_tuq4e")]
+transform = Transform3D(-0.024939101, 0, 0.49937767, 0, 0.5, 0, -0.49937767, 0, -0.024939101, -76.972305, 59.71106, 57.562943)
+script = ExtResource("25_sidl8")
+
+[node name="demonio2" parent="Mapa_Feo/demonios" instance=ExtResource("24_tuq4e")]
+transform = Transform3D(0.024825782, 0, -0.49938327, 0, 0.5, 0, 0.49938327, 0, 0.024825782, 37.15033, 59.71106, 124.12436)
+script = ExtResource("25_sidl8")
+
+[node name="insecta1" parent="Mapa_Feo/demonios" instance=ExtResource("26_7pmto")]
+transform = Transform3D(-4.995747, 0, -14.143637, 0, 14.999999, 0, 14.143637, 0, -4.995747, 17.859905, 58.11995, 38.925293)
+script = ExtResource("27_x12ur")
+
+[node name="insecta2" parent="Mapa_Feo/demonios" instance=ExtResource("26_7pmto")]
+transform = Transform3D(-0.21257544, 0, 14.998492, 0, 14.999999, 0, -14.998492, 0, -0.21257544, -24.494375, 58.11995, 125.15059)
+script = ExtResource("27_x12ur")
+
+[node name="enemigos" type="Node3D" parent="Mapa_Feo"]
+
+[node name="enemigo" parent="Mapa_Feo/enemigos" instance=ExtResource("28_j4cnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6359863, 0)
+
+[node name="cuchillo" type="Node3D" parent="Mapa_Feo"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.77597046, 0)
+
+[node name="Area3D" type="Area3D" parent="Mapa_Feo/cuchillo"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.753761, 0)
+script = ExtResource("29_ploti")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Feo/cuchillo/Area3D"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.2263918, 42.991768, 213.79456)
+shape = SubResource("SphereShape3D_bq263")
+
+[node name="Sketchfab_Scene" parent="Mapa_Feo/cuchillo/Area3D" instance=ExtResource("30_4puve")]
+transform = Transform3D(-0.0020012043, 0.007287606, 0.01388396, 0.0010396753, 0.014027443, -0.0072130626, -0.01564585, 0, -0.0022551592, 0.60322237, 42.168407, 214.14815)
+
+[node name="pastillas" parent="Mapa_Feo" instance=ExtResource("31_86a5l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5140991, 61.471893, 267.85953)
+script = ExtResource("32_jfuod")
+
+[node name="tp_pastis" type="Area3D" parent="Mapa_Feo/pastillas" node_paths=PackedStringArray("connect_portal")]
+script = ExtResource("33_30dch")
+connect_portal = NodePath("../destino_pastis")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Feo/pastillas/tp_pastis"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.0279694, 0)
+shape = SubResource("CapsuleShape3D_7btbj")
+
+[node name="destino_pastis" type="Area3D" parent="Mapa_Feo/pastillas"]
+transform = Transform3D(-0.99601775, 0, 0.08915507, 0, 1, 0, -0.08915507, 0, -0.99601775, -823.8978, 233.22166, -720.43384)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa_Feo/pastillas/destino_pastis"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("SphereShape3D_jykb5")
+
+[node name="sueloLava" parent="Mapa_Feo" instance=ExtResource("36_sukfs")]
+transform = Transform3D(200, 0, 0, 0, 200, 0, 0, 0, 238.3797, -15.626282, 31.17984, 169.82907)
+
+[node name="trasportaciones" type="Node3D" parent="."]
+
+[node name="tp" type="Area3D" parent="trasportaciones" node_paths=PackedStringArray("connect_portal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -43.263985)
+script = ExtResource("4_apd2t")
+connect_portal = NodePath("../localizacion")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trasportaciones/tp"]
+shape = SubResource("SphereShape3D_tl684")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trasportaciones/tp"]
+mesh = SubResource("SphereMesh_apd2t")
+surface_material_override/0 = SubResource("StandardMaterial3D_tl684")
+
+[node name="localizacion" type="Area3D" parent="trasportaciones"]
+transform = Transform3D(-0.001, -1.5099581e-10, 0, 1.5099581e-10, -0.001, 0, 0, 0, 0.001, 824.4685, -229.129, 454.68445)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trasportaciones/localizacion"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 824.5, 1509.5938, 454.53125)
+shape = SubResource("SphereShape3D_apd2t")
+
+[node name="lava" type="Area3D" parent="trasportaciones" node_paths=PackedStringArray("connect_portal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 279.19, 84.317665, 660.726)
+script = ExtResource("4_apd2t")
+connect_portal = NodePath("../localizacion")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trasportaciones/lava"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 525.8556, -363.02103, -35.383606)
+shape = SubResource("BoxShape3D_tl684")
+
+[node name="Menu" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("36_1uk4a")
+
+[node name="ColorRect" type="ColorRect" parent="Menu"]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 721.0
+offset_bottom = 404.0
+scale = Vector2(1.5949572, 1.6042897)
+color = Color(0.5303885, 0.32694688, 0.5015721, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 118.0
+offset_right = 839.0
+offset_bottom = 440.0
+scale = Vector2(1.1720583, 1.2510284)
+alignment = 1
+
+[node name="Continuar" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_1uk4a")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.174642, 0.043648615, 0.17823982, 1)
+theme_override_font_sizes/font_size = 30
+text = "Continuar"
+
+[node name="Salir" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_1uk4a")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.1764706, 0.043137256, 0.1764706, 1)
+theme_override_font_sizes/font_size = 30
+text = "Salir"
+
+[connection signal="body_entered" from="Mapa_Feo/cuchillo/Area3D" to="Mapa_Feo/cuchillo/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Mapa_Feo/pastillas/tp_pastis" to="Mapa_Feo/pastillas/tp_pastis" method="_on_body_entered"]
+[connection signal="body_entered" from="trasportaciones/tp" to="trasportaciones/tp" method="_on_body_entered"]
+[connection signal="body_entered" from="trasportaciones/lava" to="trasportaciones/lava" method="_on_body_entered"]
+[connection signal="pressed" from="Menu/VBoxContainer/Continuar" to="Menu" method="_on_continuar_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Salir" to="Menu" method="_on_salir_pressed"]

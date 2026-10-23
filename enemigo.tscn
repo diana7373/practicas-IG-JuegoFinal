@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://c07qtef5pagai"]
+
+[ext_resource type="Script" uid="uid://btl77jb0cusbn" path="res://enemigo.gd" id="1_bnx68"]
+[ext_resource type="PackedScene" uid="uid://k804g5ipwyh0" path="res://modelos/mapaFeo/closer_-_silent_hill_3.glb" id="2_j8qs0"]
+[ext_resource type="Script" uid="uid://rc7x4stga08w" path="res://modelos/mapaFeo/enem1_mov.gd" id="3_57rph"]
+[ext_resource type="PackedScene" uid="uid://de2rq56y4mw85" path="res://barraVida1.tscn" id="4_db8mt"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_closg"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_7d20d"]
+viewport_path = NodePath("SubViewport")
+
+[node name="CharacterBody3D" type="CharacterBody3D" groups=["enemy"]]
+script = ExtResource("1_bnx68")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.8418083, 0, -0.5908109, 0, 4.8777213, 0, 0.5908109, 0, -4.8418083, 0, 65.908295, 244.04468)
+shape = SubResource("CapsuleShape3D_closg")
+
+[node name="enemy" parent="." instance=ExtResource("2_j8qs0")]
+transform = Transform3D(-0.08069681, 0, -0.009846849, 0, 0.081295356, 0, 0.009846849, 0, -0.08069681, 0, 61.73868, 244.04468)
+script = ExtResource("3_57rph")
+
+[node name="barraVida" parent="enemy" instance=ExtResource("4_db8mt")]
+transform = Transform3D(15, 0, 0, 0, 14.999998, 0, 0, 0, 15, 0.29037476, 116.66638, 24.188477)
+texture = SubResource("ViewportTexture_7d20d")
+
+[connection signal="no_hp_left" from="enemy/barraVida" to="." method="_on_barra_vida_no_hp_left"]

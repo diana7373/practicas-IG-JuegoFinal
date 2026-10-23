@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://xe8ykqtn5tld"]
+
+[ext_resource type="Shader" uid="uid://cxts4x16ryouv" path="res://lava.gdshader" id="1_hx0y7"]
+[ext_resource type="Texture2D" uid="uid://bnqsbjt0yvj5k" path="res://texturas/grainy 12 - 128x128.png" id="2_hx0y7"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ypa4k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hx0y7"]
+render_priority = 0
+shader = ExtResource("1_hx0y7")
+shader_parameter/noise_texture = ExtResource("2_hx0y7")
+shader_parameter/speed = 1.0
+shader_parameter/flow_direction = Vector2(1, 0.5)
+shader_parameter/distortion_strength = 0.5
+shader_parameter/lava_scale = 1.0
+shader_parameter/lava_color1 = Color(0.7636044, 0.22197634, 3.85046e-07, 1)
+shader_parameter/lava_color2 = Color(0.4775244, 0.04276076, 0, 1)
+shader_parameter/hot_spots_color = Color(1, 0.65882355, 0.039215688, 1)
+shader_parameter/brightness = 1.5
+shader_parameter/glow_intensity = 0.8
+shader_parameter/time_scale = 1.0
+
+[node name="sueloLava" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_ypa4k")
+surface_material_override/0 = SubResource("ShaderMaterial_hx0y7")

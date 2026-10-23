@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://de2rq56y4mw85"]
+
+[ext_resource type="Script" uid="uid://c0n120rj64mj8" path="res://recibirDaño.gd" id="1_ofxd6"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_closg"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wijw6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bq263"]
+bg_color = Color(0.15127608, 0.15127608, 0.15127605, 1)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhvgb"]
+bg_color = Color(0.5795201, 0.12696722, 0.12755355, 1)
+
+[node name="Sprite3D" type="Sprite3D"]
+transform = Transform3D(15, 0, 0, 0, 14.999998, 0, 0, 0, 15, 0, 0, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_closg")
+script = ExtResource("1_ofxd6")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(256, 40)
+
+[node name="Panel" type="Panel" parent="SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wijw6")
+
+[node name="ProgressBar" type="ProgressBar" parent="SubViewport/Panel"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 27.0
+pivot_offset = Vector2(24, 40)
+theme_override_styles/background = SubResource("StyleBoxFlat_bq263")
+theme_override_styles/fill = SubResource("StyleBoxFlat_dhvgb")
+value = 100.0

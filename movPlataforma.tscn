@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds5epwtjkxboc"]
+
+[ext_resource type="Script" uid="uid://bk31okdpvbuno" path="res://mov_plataforma.gd" id="1_623fy"]
+[ext_resource type="PackedScene" uid="uid://n6vhi6nhvde3" path="res://modelos/mapaFeo/bloody_aztec_platform.glb" id="2_623fy"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_u7qyd"]
+height = 0.35656738
+radius = 2.121582
+
+[node name="MovPlataforma" type="Node3D"]
+script = ExtResource("1_623fy")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -10.094721, -0.8843994, 0)
+shape = SubResource("CylinderShape3D_u7qyd")
+
+[node name="Sketchfab_Scene" parent="AnimatableBody3D" instance=ExtResource("2_623fy")]
+transform = Transform3D(21.264069, 0, 0, 0, 21.264069, 0, 0, 0, 21.264069, -10.342587, -0.7295923, 0.08188057)

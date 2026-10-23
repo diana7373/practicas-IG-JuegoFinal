@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce8d555h8xl0n"]
+
+[ext_resource type="PackedScene" uid="uid://dxngx2h0ytnik" path="res://modelos/mapaFeo/minecraft_pills.glb" id="1_sw777"]
+[ext_resource type="Script" uid="uid://c5q6qk4rjnq6u" path="res://modelos/mapaFeo/pastisMov.gd" id="2_osg6v"]
+
+[node name="pastillas" type="Node3D"]
+
+[node name="pastillas" parent="." instance=ExtResource("1_sw777")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+script = ExtResource("2_osg6v")
