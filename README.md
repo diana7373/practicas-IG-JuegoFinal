@@ -146,7 +146,7 @@ El proyecto se organiza en escenas y sistemas principales:
 La memoria del proyecto explica con mayor detalle la estructura de las escenas, el controlador del jugador, los sistemas de teleportación, las plataformas, el enemigo, los objetos interactivos, el shader de lava y el menú.
 
 ────୨ৎ────
-**[Consultar la memoria completa en PDF](docs/memoria.pdf)**
+**[Consultar la memoria completa en PDF](ProyectoFinalIG.pdf)**
 ────୨ৎ────
 
 ## ⋆𐙚₊˚⊹♡ Autora
